@@ -44,3 +44,10 @@ Route::get('relationship-problems', function(){
 Route::get('/contact-us', function(){
     return redirect()->route('welcome', ['#contact-section']);
 });
+
+Route::group(['prefix' => 'admin'], function(){
+    Route::get('home', function(){
+        return view('admin.home');
+    });
+});
+

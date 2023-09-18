@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{asset('assets/frontend/fonts/flaticon/font/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('assets/frontend/css/aos.css')}}">
     <link rel="stylesheet" href="{{asset('assets/frontend/css/style.css')}}">
-    <link rel="icon" type="image/png" href="assets/frontend/images/neco-logo.png">
+    <link rel="icon" type="image/png" href="{{asset('assets/frontend/images/neco-logo.png')}}">
     <script nonce="4b73086d-7591-4f21-b295-c105fe4ced29')}}">
         (function(w,d){!function(a,b,c,d){a[c]=a[c]||{};a[c].executed=[];a.zaraz={deferred:[],listeners:[]};a.zaraz.q=[];a.zaraz._f=function(e){return async function(){var f=Array.prototype.slice.call(arguments);a.zaraz.q.push({m:e,a:f})}};for(const g of["track","set","debug"])a.zaraz[g]=a.zaraz._f(g);a.zaraz.init=()=>{var h=b.getElementsByTagName(d)[0],i=b.createElement(d),j=b.getElementsByTagName("title")[0];j&&(a[c].t=b.getElementsByTagName("title")[0].text);a[c].x=Math.random();a[c].w=a.screen.width;a[c].h=a.screen.height;a[c].j=a.innerHeight;a[c].e=a.innerWidth;a[c].l=a.location.href;a[c].r=b.referrer;a[c].k=a.screen.colorDepth;a[c].n=b.characterSet;a[c].o=(new Date).getTimezoneOffset();if(a.dataLayer)for(const n of Object.entries(Object.entries(dataLayer).reduce(((o,p)=>({...o[1],...p[1]})),{})))zaraz.set(n[0],n[1],{scope:"page"});a[c].q=[];for(;a.zaraz.q.length;){const q=a.zaraz.q.shift();a[c].q.push(q)}i.defer=!0;for(const r of[localStorage,sessionStorage])Object.keys(r||{}).filter((t=>t.startsWith("_zaraz_"))).forEach((s=>{try{a[c]["z_"+s.slice(7)]=JSON.parse(r.getItem(s))}catch{a[c]["z_"+s.slice(7)]=r.getItem(s)}}));i.referrerPolicy="origin";i.src="../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(a[c])));h.parentNode.insertBefore(i,h)};["complete","interactive"].includes(b.readyState)?zaraz.init():a.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);
     </script>
@@ -399,7 +399,6 @@
                                     Blueprint to Success Begins Here. We are your trusted ally in 
                                     overcoming the hurdles and complexities of the business world.
                                 </p>
-                                
                             </div>
                         </div>
                     </div>
@@ -590,37 +589,25 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <h2 class="footer-heading mb-4">About Us</h2>
-                                <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere
-                                    laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
-                                <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-                                <form action="#" method="post" class="footer-subscribe">
-                                    <div class="input-group mb-3">
-                                        <input type="text"
-                                            class="form-control border-secondary text-white bg-transparent"
-                                            placeholder="Enter Email" aria-label="Enter Email"
-                                            aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-white text-black" type="button"
-                                                id="button-addon2">Send</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <p class="mb-5">We are dedicated to providing compassionate and 
+                                    confidential counseling services that empower individuals to 
+                                    overcome life's challenges and achieve emotional well-being.
+                                </p>
                             </div>
                             <div class="col-md-3 ml-auto">
                                 <h2 class="footer-heading mb-4">Quick Links</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#about-section">About Us</a></li>
+                                    <li><a href="#services-section">Services</a></li>
+                                    <li><a href="#training-section">Training</a></li>
+                                    <li><a href="#contact-section">Contact Us</a></li>
                                 </ul>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3 ml-auto">
                                 <h2 class="footer-heading mb-4">Follow Us</h2>
-                                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                                <a href="https://www.youtube.com/@necoenglishtvofficial" target="_blank" class="pl-0 pr-3"><span class="icon-youtube "></span></a>
+                                <a href="https://www.facebook.com/profile.php?id=100081191981773" target="_blank" class="pl-3 pr-3"><span class="icon-facebook"></span></a>
+                                <a href="https://www.instagram.com/newnesscounselingorg/" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                             </div>
                         </div>
                     </div>
