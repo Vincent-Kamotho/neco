@@ -20,6 +20,17 @@
             <form action ="{{url('request-appointment')}}" method="POST">
                 @csrf
                 <h3>Book an Appointment</h3>
+                @if(session('error'))
+                   <div class="alert alert-danger" style="color:red;">
+                        {{ session('error') }}
+                    </div>
+                @endif
+                @if(session('success'))
+                    <div class="alert alert-success" style="color:#2b1b7588">
+                        {{ session('success')}}
+                    </div>
+                    {{ session()->forget('success') }}
+                @endif
                 <div class="form-row">
                     <div class="form-wrapper">
                         <label for="name">Names *</label>
@@ -49,15 +60,16 @@
                 <div class="form-row">
                     <div class="form-wrapper">
                         <label for="dp1">Date *</label>
-                        <span class="lnr lnr-calendar-full"></span>
-                        <input type="text" class="form-control datepicker-here" data-language="en" name="date" value="{{ old('date') }}" data-date-format="dd M yyyy" id="dp1">
+                        {{-- <span class="lnr lnr-calendar-full"></span> --}}
+                        {{-- <input type="text" class="form-control datepicker-here" data-language="en" name="date" value="{{ old('date') }}" data-date-format="dd M yyyy" id="dp1"> --}}
+                        <input type="date" class="form-control" name="date" value="{{ old('date') }}">
                         @error('date')
                             <div class="text-red-500" style="color: red;">{{ $message}}</div>
                         @enderror
                     </div>
                     <div class="form-wrapper">
                         <label for>Time</label>
-                        <input type="time" class="form-control timepicker-here" data-language="en" name="time">
+                        <input type="time" class="form-control timepicker-here" data-language="en" value="{{ old('time') }}" name="time">
                         @error('time')
                             <div class="text-red-500" style="color: red;">{{ $message}}</div>
                         @enderror
@@ -66,7 +78,7 @@
                 <div class="form-row last">
                     <div class="form-wrapper">
                         <label for> Issue *</label>
-                        <select name="issue" id="issue" class="form-control">
+                        <select name="issue" id="issue" value="{{old('issue')}}" class="form-control">
                             <option value="">Select Option</option>
                             <option value="Depression Treatment">Depression Treatment</option>
                             <option value="Personal Problem">Personal Problem</option>

@@ -52,8 +52,13 @@ Route::get('/book-appointment', function(){
 Route::post('/request-appointment', [App\Http\Controllers\ClientAppointment::class, 'store']);
 
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('home', function(){
-        return view('admin.home');
+    Route::get('home', function() { 
+        return view('admin.home'); 
     });
+    Route::get('appointments', [App\Http\Controllers\ClientAppointment::class, 'index']);
+    // Route::get('appointments', function() {
+    //     return view('admin.appointments.appointments'); 
+    // });
 });
+
 

@@ -36,113 +36,10 @@
     <div id="pcoded" class="pcoded">
         <div class="pcoded-overlay-box"></div>
         <div class="pcoded-container navbar-wrapper">
-            <nav class="navbar header-navbar pcoded-header">
-                <div class="navbar-wrapper">
-                    <div class="navbar-logo">
-                        <a class="mobile-menu" id="mobile-collapse" href="#">
-                            <i class="feather icon-menu"></i>
-                        </a>
-                        <a href="index.html">
-                            <img class="img-fluid" src="{{asset('assets/frontend/images/neco-logo.png')}}" style="height:50px; background:#eeeaea" />
-                        </a>
-                        <a class="mobile-options">
-                            <i class="feather icon-more-horizontal"></i>
-                        </a>
-                    </div>
-                    <div class="navbar-container">
-                        <ul class="nav-left">
-                            <li class="header-search">
-                                <div class="main-search morphsearch-search">
-                                    <div class="input-group">
-                                        <span class="input-group-addon search-close"><i
-                                                class="feather icon-x"></i></span>
-                                        <input type="text" class="form-control">
-                                        <span class="input-group-addon search-btn"><i
-                                                class="feather icon-search"></i></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#!" onclick="javascript:toggleFullScreen()">
-                                    <i class="feather icon-maximize full-screen"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div> 
-                </div>
-            </nav>
-
+            @include('admin.layouts.header')
             <div class="pcoded-main-container">
                 <div class="pcoded-wrapper">
-                    <nav class="pcoded-navbar">
-                        <div class="pcoded-inner-navbar main-menu">
-                            <div class="pcoded-navigatio-lavel">Admin</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="pcoded-hasmenu active ">
-                                    <a href="javascript:void(0)">
-                                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                                        <span class="pcoded-mtext">Dashboard</span>
-                                    </a>
-                                    <ul class="pcoded-submenu">
-                                        <li class="active">
-                                            <a href="#">
-                                                <span class="">Default</span>
-                                            </a>
-                                        </li>
-                                        <li class>
-                                            <a href="#">
-                                                <span class="">CRM</span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="#">
-                                                <span class="">Analytics</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="pcoded-hasmenu">
-                                    <a href="javascript:void(0)">
-                                        <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
-                                        <span class="pcoded-mtext">Page layouts</span>
-                                    </a>
-                                    <ul class="pcoded-submenu">
-                                        <li class="">
-                                            <a href="">
-                                                <span class="">Vertical</span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="">
-                                                <span class="">Horizontal</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class>
-                                    <a href="default/navbar-light.html">
-                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                        <span class="pcoded-mtext">Navigation</span>
-                                    </a>
-                                </li>
-                                <li class="pcoded-hasmenu">
-                                    <a href="javascript:void(0)">
-                                        <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
-                                        <span class="pcoded-mtext">Widget</span>
-                                    </a>
-                                    <ul class="pcoded-submenu">
-                                        <li class="">
-                                            <a href="default/widget-statistic.html">
-                                                <span class="">Statistic</span>
-                                            </a>
-                                        </li>
-                                        
-                                    </ul>
-                                </li>
-                            </ul>
-                            
-                        </div>
-                    </nav>
+                    @include('admin.layouts.sidebar')
                     <div class="pcoded-content">
                         <div class="pcoded-inner-content">
                             <div class="main-body">
@@ -239,6 +136,8 @@
             </div>
         </div>
     </div>
+
+    
 
     {{--<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>--}}
     <script type="text/javascript" src="{{asset('assets/backend/files/bower_components/jquery/dist/jquery.min.js')}}"></script>
