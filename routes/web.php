@@ -45,6 +45,12 @@ Route::get('/contact-us', function(){
     return redirect()->route('welcome', ['#contact-section']);
 });
 
+Route::get('/book-appointment', function(){
+    return view('frontend.appointmentbooking');
+});
+
+Route::post('/request-appointment', [App\Http\Controllers\ClientAppointment::class, 'store']);
+
 Route::group(['prefix' => 'admin'], function(){
     Route::get('home', function(){
         return view('admin.home');

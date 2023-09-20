@@ -68,7 +68,6 @@
                                 </a>
                             </li>
                         </ul>
-                        
                     </div> 
                 </div>
             </nav>
@@ -86,19 +85,18 @@
                                     </a>
                                     <ul class="pcoded-submenu">
                                         <li class="active">
-                                            <a href="default/index.html">
-                                                <span class="pcoded-mtext">Default</span>
+                                            <a href="#">
+                                                <span class="">Default</span>
                                             </a>
                                         </li>
                                         <li class>
-                                            <a href="default/dashboard-crm.html">
-                                                <span class="pcoded-mtext">CRM</span>
+                                            <a href="#">
+                                                <span class="">CRM</span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="default/dashboard-analytics.html">
-                                                <span class="pcoded-mtext">Analytics</span>
-                                                <span class="pcoded-badge label label-info ">NEW</span>
+                                            <a href="#">
+                                                <span class="">Analytics</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -107,7 +105,6 @@
                                     <a href="javascript:void(0)">
                                         <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
                                         <span class="pcoded-mtext">Page layouts</span>
-                                        {{-- <span class="pcoded-badge label label-warning">NEW</span> --}}
                                     </a>
                                     <ul class="pcoded-submenu">
                                         <li class="">
