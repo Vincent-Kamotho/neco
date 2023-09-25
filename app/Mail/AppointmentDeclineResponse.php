@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SendAppointmentResponse extends Mailable
+class AppointmentDeclineResponse extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -30,8 +30,8 @@ class SendAppointmentResponse extends Mailable
     public function build()
     {
         //return $this->view('view.name');
-        return $this->subject('Appointment Request Approval')
-            ->view('mail.appointmentapproval')
+        return $this->subject('Appointment Request Decline')
+            ->view('mail.appointmentdecline')
             ->with(['appointment' => $this->appointment]);
     }
 }

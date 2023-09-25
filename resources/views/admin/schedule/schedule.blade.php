@@ -54,7 +54,7 @@
                                             <div class="col-lg-8">
                                                 <div class="page-header-title">
                                                     <div class="d-inline">
-                                                        <h4>Appointment Requests</h4>
+                                                        <h4>My Schedule</h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -69,15 +69,11 @@
 
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <h5>Appointment Requests</h5>
+                                                        <h5>My Schedule</h5>
                                                     </div>
                                                     @if(session()->has('success'))
                                                         <div class="alert alert-success">
-                                                           {{ session()->get('success') }}
-                                                        </div>
-                                                    @elseif(session()->has('failed'))
-                                                        <div class="alert alert-danger">
-                                                            {{session()->get('failed')}}
+                                                            {{ session()->get('success') }}
                                                         </div>
                                                     @endif
                                                     <div class="card-block">
@@ -92,21 +88,28 @@
                                                                         <th>Appointment Date</th>
                                                                         <th>Time Slot</th>
                                                                         <th>Service</th>
+                                                                        <th>Status</th>
                                                                         <th>Action</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    @foreach($appointments as $appointment)
+                                                                    @foreach($schedule as $schedule)
                                                                     <tr>
-                                                                        <td>{{$appointment->names}}</td>
-                                                                        <td>{{$appointment->phone}}</td>
-                                                                        <td>{{$appointment->email}}</td>
-                                                                        <td>{{$appointment->date}}</td>
-                                                                        <td>{{$appointment->time}}</td>
-                                                                        <td>{{$appointment->issue}}</td>
+                                                                        <td>{{$schedule->names}}</td>
+                                                                        <td>{{$schedule->phone}}</td>
+                                                                        <td>{{$schedule->email}}</td>
+                                                                        <td>{{$schedule->date}}</td>
+                                                                        <td>{{$schedule->time}}</td>
+                                                                        <td>{{$schedule->issue}}</td>
                                                                         <td>
-                                                                            <a href="{{url('admin/approve-appointment/'.$appointment->id)}}" class="btn btn-success">Approve</a>
-                                                                            <a href="{{url('admin/decline-appointment/'.$appointment->id)}}" class="btn btn-danger">Decline</a>
+                                                                            @if($schedule->status == 'Approved')
+                                                                                <span class="badge badge-success">{{$schedule->status}}</span>
+                                                                            @else
+                                                                                <span class="badge badge-danger">{{$schedule->status}}</span>
+                                                                            @endif
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="{{url('admin/clear-schedule/' . $schedule->id )}}" style="color:red">Clear</a>
                                                                         </td>
                                                                     </tr>
                                                                     @endforeach  

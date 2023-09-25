@@ -56,9 +56,12 @@ Route::group(['prefix' => 'admin'], function(){
         return view('admin.home'); 
     });
     Route::get('appointments', [App\Http\Controllers\ClientAppointment::class, 'index']);
-    // Route::get('appointments', function() {
-    //     return view('admin.appointments.appointments'); 
-    // });
+    Route::get('approve-appointment/{id}', [App\Http\Controllers\ClientAppointment::class, 'ApproveRequest']);
+    Route::get('decline-appointment/{id}', [App\Http\Controllers\ClientAppointment::class, 'DeclineRequest']);
+
+
+    Route::get('schedule', [App\Http\Controllers\Schedule::class, 'index']);
+    Route::get('clear-schedule/{id}', [App\Http\Controllers\Schedule::class, 'destroy']);
 });
 
 
