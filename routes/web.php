@@ -62,6 +62,12 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::get('schedule', [App\Http\Controllers\Schedule::class, 'index']);
     Route::get('clear-schedule/{id}', [App\Http\Controllers\Schedule::class, 'destroy']);
+
+
+    Route::group(['prefix' => 'team'], function(){
+        Route::get('counsellors', [App\Http\Controllers\Team::class, 'CounsellorIndex']);
+        Route::get('add-counsellor', [App\Http\Controllers\Team::class, 'createCounsellor']);
+    });
 });
 
 

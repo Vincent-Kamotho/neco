@@ -30,6 +30,26 @@
                     </li>
                     <li class="pcoded-hasmenu">
                         <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather icon-users"></i></span>
+                            <span class="pcoded-mtext">Team</span>
+                        </a>
+                        <ul class="pcoded-submenu">
+                            <li class="">
+                                <a href="{{url('admin/team/counsellors')}}">
+                                    <span class="">Counsellors</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="">
+                                    <span class="">Staff</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
                             <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
                             <span class="pcoded-mtext">Widget</span>
                         </a>
