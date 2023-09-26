@@ -54,7 +54,7 @@
                                             <div class="col-lg-8">
                                                 <div class="page-header-title">
                                                     <div class="d-inline">
-                                                        <h4>My Counsellors</h4>
+                                                        <h4>Add Counsellors</h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -81,27 +81,49 @@
                                                         </div>
                                                     @endif
                                                     <div class="card-block">
-                                                        <div class="dt-responsive table-responsive">
-                                                            <table id="simpletable"
-                                                                class="table table-striped table-bordered nowrap">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>ID</th>
-                                                                        <th>Name</th>
-                                                                        <th>Phone Number</th>
-                                                                        <th>Email</th>
-                                                                        <th>Organisation</th>
-                                                                        <th>Action</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                     
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
+                                                        <h4 class="sub-title">Add Counsellor</h4>
+                                                        <form action="{{url('admin/team/save-counsellor')}}" method="POST">
+                                                            @csrf
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4">
+                                                                    <label for="name">Names</label>
+                                                                    <input type="text" name="names" class="form-control @error('names') is-invalid @enderror" value="{{ old('names') }}" placeholder="John Doe">
+                                                                    @error('names')
+                                                                       <div style="color:red">{{ $message }}</div>
+                                                                    @enderror
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <label for="email">Email</label>
+                                                                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="johndoe@gmail.com">
+                                                                    @error('email')
+                                                                       <div style="color:red">{{ $message }}</div>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4">
+                                                                    <label for="name">Phone Number</label>
+                                                                    <input type="text" name="phone" class="form-control @error('phone') is-invalid @enderror"  value="{{ old('phone') }}" placeholder="0712345678">
+                                                                    @error('phone')
+                                                                       <div style="color:red">{{ $message }}</div>
+                                                                    @enderror
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <label for="email">Organization</label>
+                                                                    <input type="text" name="organization" class="form-control @error('organization') is-invalid @enderror" value="{{ old('organization') }}"  placeholder="NECO">
+                                                                    @error('organization')
+                                                                       <div style="color:red">{{ $message }}</div>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4">
+                                                                    <button type="submit" class="btn btn-success">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>

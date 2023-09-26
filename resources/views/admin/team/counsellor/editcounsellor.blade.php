@@ -54,89 +54,77 @@
                                             <div class="col-lg-8">
                                                 <div class="page-header-title">
                                                     <div class="d-inline">
-                                                        <h4>My Counsellors</h4>
+                                                        <h4>Edit Counsellors</h4>
                                                     </div>
                                                 </div>
                                             </div>
-
+                                            
                                         </div>
                                     </div>
+
 
                                     <div class="page-body">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <div class="card">
-                                                    <div class="row align-items-end">
-                                                        <div class="col-lg-8">
-                                                            <div class="page-header-title">
-                                                                <div class="d-inline">
-                                                                    <h6 style="margin-left:20px;">NECO Counsellors</h6>
 
-                                                                    @if(session()->has('success'))
-                                                                    <div class="alert alert-success">
-                                                                        {{ session()->get('success') }}
-                                                                    </div>
-                                                                    @elseif(session()->has('failed'))
-                                                                    <div class="alert alert-danger">
-                                                                        {{session()->get('failed')}}
-                                                                    </div>
-                                                                    @endif
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>NECO Counsellors</h5>
+                                                    
+                                                    @if(session()->has('success'))
+                                                        <div class="alert alert-success">
+                                                           {{ session()->get('success') }}
+                                                        </div>
+                                                    @elseif(session()->has('failed'))
+                                                        <div class="alert alert-danger">
+                                                            {{session()->get('failed')}}
+                                                        </div>
+                                                    @endif
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <h4 class="sub-title">Edit Counsellor</h4>
+                                                        <form action="{{url('admin/team/update-counsellor/'.$counsellor->id)}}" method="POST">
+                                                            @csrf
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4">
+                                                                    <label for="name">Names</label>
+                                                                    <input type="text" name="names" class="form-control @error('names') is-invalid @enderror" value="{{$counsellor->names}}" placeholder="John Doe">
+                                                                    @error('names')
+                                                                       <div style="color:red">{{ $message }}</div>
+                                                                    @enderror
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <label for="email">Email</label>
+                                                                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{$counsellor->email}}" placeholder="johndoe@gmail.com">
+                                                                    @error('email')
+                                                                       <div style="color:red">{{ $message }}</div>
+                                                                    @enderror
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-lg-4">
-                                                            <div class="page-header-breadcrumb">
-                                                                <a href="{{url('admin/team/add-counsellor')}}"
-                                                                    style="margin-top:10px; margin-right:20px;"
-                                                                    class="btn btn-success">Add Counsellor</a>
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4">
+                                                                    <label for="name">Phone Number</label>
+                                                                    <input type="text" name="phone" class="form-control @error('phone') is-invalid @enderror"  value="{{$counsellor->phone}}" placeholder="0712345678">
+                                                                    @error('phone')
+                                                                       <div style="color:red">{{ $message }}</div>
+                                                                    @enderror
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <label for="email">Organization</label>
+                                                                    <input type="text" name="organization" class="form-control @error('organization') is-invalid @enderror" value="{{$counsellor->organization}}"  placeholder="NECO">
+                                                                    @error('organization')
+                                                                       <div style="color:red">{{ $message }}</div>
+                                                                    @enderror
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    {{-- <div class="card-header">
-                                                        <h5>NECO Counsellors</h5>
-
-                                                    </div>
-                                                    @if(session()->has('success'))
-                                                    <div class="alert alert-success">
-                                                        {{ session()->get('success') }}
-                                                    </div>
-                                                    @elseif(session()->has('failed'))
-                                                    <div class="alert alert-danger">
-                                                        {{session()->get('failed')}}
-                                                    </div>
-                                                    @endif --}}
-                                                    <div class="card-block">
-                                                        <div class="dt-responsive table-responsive">
-                                                            <table id="simpletable"
-                                                                class="table table-striped table-bordered nowrap">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>ID</th>
-                                                                        <th>Name</th>
-                                                                        <th>Phone Number</th>
-                                                                        <th>Email</th>
-                                                                        <th>Organisation</th>
-                                                                        <th>Action</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                @foreach ($counsellor as $counsellor)
-                                                                <tbody>
-                                                                    <td>{{$counsellor->id}}</td>
-                                                                    <td>{{$counsellor->names}}</td>
-                                                                    <td>{{$counsellor->email}}</td>
-                                                                    <td>{{$counsellor->phone}}</td>
-                                                                    <td>{{$counsellor->organization}}</td>
-                                                                    <td>
-                                                                        <a href="{{url('admin/team/edit-counsellor/'.$counsellor->id)}}" class="btn btn-success">Edit</a>
-                                                                        <a href="{{url('admin/team/delete-counsellor/'.$counsellor->id)}}" class="btn btn-danger">Delete</a>
-                                                                    </td>
-                                                                </tbody>
-                                                                @endforeach
-                                                            </table>
-                                                        </div>
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4">
+                                                                    <button type="submit" class="btn btn-success">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>

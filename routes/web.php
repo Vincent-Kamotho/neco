@@ -67,6 +67,10 @@ Route::group(['prefix' => 'admin'], function(){
     Route::group(['prefix' => 'team'], function(){
         Route::get('counsellors', [App\Http\Controllers\Team::class, 'CounsellorIndex']);
         Route::get('add-counsellor', [App\Http\Controllers\Team::class, 'createCounsellor']);
+        Route::post('save-counsellor', [App\Http\Controllers\Team::class, 'storeCounsellor']);
+        Route::get('edit-counsellor/{id}', [App\Http\Controllers\Team::class, 'editCounsellor']);
+        Route::post('update-counsellor/{id}', [App\Http\Controllers\Team::class, 'updateCounsellor']);
+        Route::get('delete-counsellor/{id}', [App\Http\Controllers\Team::class, 'destroyCounsellor']);
     });
 });
 
