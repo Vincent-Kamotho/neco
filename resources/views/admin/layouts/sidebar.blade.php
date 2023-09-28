@@ -40,7 +40,7 @@
                                 </a>
                             </li>
                             <li class="">
-                                <a href="">
+                                <a href="{{url('admin/team/staff')}}">
                                     <span class="">Staff</span>
                                 </a>
                             </li>

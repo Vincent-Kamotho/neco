@@ -71,6 +71,14 @@ Route::group(['prefix' => 'admin'], function(){
         Route::get('edit-counsellor/{id}', [App\Http\Controllers\Team::class, 'editCounsellor']);
         Route::post('update-counsellor/{id}', [App\Http\Controllers\Team::class, 'updateCounsellor']);
         Route::get('delete-counsellor/{id}', [App\Http\Controllers\Team::class, 'destroyCounsellor']);
+
+
+        Route::get('staff', [App\Http\Controllers\Team::class, 'staffIndex']);
+        Route::get('add-staff', [App\Http\Controllers\Team::class, 'createStaff']);
+        Route::post('save-staff', [App\Http\Controllers\Team::class, 'storeStaff']);
+        Route::get('edit-staff/{id}', [App\Http\Controllers\Team::class, 'editStaff']);
+        Route::post('update-staff/{id}', [App\Http\Controllers\Team::class, 'updateStaff']);
+        Route::get('delete-staff/{id}', [App\Http\Controllers\Team::class, 'deleteStaff']);
     });
 });
 

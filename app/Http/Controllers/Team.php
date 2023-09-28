@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Counsellor;
+use App\Models\Staff;
 use Illuminate\Http\Request;
 
 class Team extends Controller
@@ -111,5 +112,63 @@ class Team extends Controller
         $counsellor = Counsellor::find($id);
         $counsellor->delete();
         return redirect()->to('admin/team/counsellors')->with('failed', 'Counsellor Successfully Deleted');
+    }
+
+    public function staffIndex()
+    {
+        $staff = Staff::all();
+        return view('admin.team.staff.staff')->with('staff' , $staff);
+    }
+    public function createStaff()
+    {
+        return view('admin.team.staff.addstaff');
+    }
+    public function storeStaff(Request $request)
+    {
+        $request->validate([
+            'names' =>'required',
+            'email' => 'required|email',
+            'phone' => 'required|regex:/^07\d{8}$/|min:10',
+            'docket' => 'required'
+        ]);
+
+        $staff = new Staff;
+        $staff->name = $request->input('names');
+        $staff->email = $request->input('email');
+        $staff->phone = $request->input('phone');
+        $staff->docket = $request->input('docket');
+        $staff->save();
+        return redirect()->to('admin/team/staff')->with('success', 'Staff Successfully Added');
+    }
+
+    public function editStaff($id)
+    {
+        $staff = Staff::find($id);
+        return view('admin.team.staff.editstaff')->with('staff' , $staff);
+    }
+
+    public function updateStaff(Request $request, $id)
+    {
+        $request->validate([
+            'names' =>'required',
+            'email' => 'required|email',
+            'phone' => 'required|regex:/^07\d{8}$/|min:10',
+            'docket' => 'required'
+        ]);
+
+        $staff = Staff::find($id);
+        $staff->name = $request->input('names');
+        $staff->email = $request->input('email');
+        $staff->phone = $request->input('phone');
+        $staff->docket = $request->input('docket');
+        $staff->update();
+        return redirect()->to('admin/team/staff')->with('success', 'Staff Successfully Updated');
+    }
+
+    public function deleteStaff($id)
+    {
+        $staff = Staff::find($id);
+        $staff->delete();
+        return redirect()->to('admin/team/staff')->with('failed', 'Staff Deleted');
     }
 }
