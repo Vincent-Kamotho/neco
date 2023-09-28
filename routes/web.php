@@ -54,7 +54,7 @@ Route::post('/request-appointment', [App\Http\Controllers\ClientAppointment::cla
 Route::group(['prefix' => 'admin'], function(){
     Route::get('home', function() { 
         return view('admin.home'); 
-    });
+    })->middleware('auth');
     Route::get('appointments', [App\Http\Controllers\ClientAppointment::class, 'index']);
     Route::get('approve-appointment/{id}', [App\Http\Controllers\ClientAppointment::class, 'ApproveRequest']);
     Route::get('decline-appointment/{id}', [App\Http\Controllers\ClientAppointment::class, 'DeclineRequest']);
