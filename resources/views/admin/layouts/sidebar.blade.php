@@ -24,7 +24,7 @@
                     </li>
                     <li class>
                         <a href="{{url('admin/schedule')}}">
-                            <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
+                            <span class="pcoded-micon"><i class="feather icon-calendar"></i></span>
                             <span class="pcoded-mtext">Schedule</span>
                         </a>
                     </li>
@@ -49,18 +49,18 @@
                         
                     </li>
                     <li class="pcoded-hasmenu">
-                        <a href="javascript:void(0)">
-                            <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
-                            <span class="pcoded-mtext">Widget</span>
+                        <a href="">
+                            <span class="pcoded-micon"><i class="feather icon-users"></i></span>
+                            <span class="pcoded-mtext">Users</span>
                         </a>
-                        <ul class="pcoded-submenu">
+                        {{-- <ul class="pcoded-submenu">
                             <li class="">
                                 <a href="default/widget-statistic.html">
                                     <span class="">Statistic</span>
                                 </a>
                             </li>
                             
-                        </ul>
+                        </ul> --}}
                     </li>
                 </ul>
                 
