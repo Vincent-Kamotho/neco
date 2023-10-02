@@ -47,7 +47,7 @@
                                 <li><a href="#training-section" class="nav-link">Our Training</a></li>
                                 <li><a href="#services-section" class="nav-link">Services</a></li>
                                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
-                                <li><a href="#contact-section" class="nav-link">Events</a></li>
+                                <li><a href="{{url('upcoming-events')}}" class="nav-link">Events</a></li>
                                 <li>
                                     <a href="{{url('book-appointment')}}" class="nav-link">
                                         <span style="background-color: #2b1b7588; color: #fff; padding: 10px 20px; border: none; border-radius: 35px; cursor: pointer; text-decoration: none; display: inline-block;" onmouseover="this.style.backgroundColor='#000';" onmouseout="this.style.backgroundColor='#2b1b7588';">Book an Appointment</span>

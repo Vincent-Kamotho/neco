@@ -49,18 +49,36 @@
                         
                     </li>
                     <li class="pcoded-hasmenu">
-                        <a href="">
+                        <a href="javascript:void(0)">
                             <span class="pcoded-micon"><i class="feather icon-users"></i></span>
-                            <span class="pcoded-mtext">Users</span>
+                            <span>Users</span>
                         </a>
-                        {{-- <ul class="pcoded-submenu">
+                        <ul class="pcoded-submenu">
                             <li class="">
-                                <a href="default/widget-statistic.html">
-                                    <span class="">Statistic</span>
+                                <a href="{{url('admin/users/list')}}">
+                                    <span class="">List</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="{{url('admin/users/create-user')}}">
+                                    <span class="">Add</span>
+                                </a>
+                            </li> 
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather icon-activity"></i></span>
+                            <span>Configurations</span>
+                        </a>
+                        <ul class="pcoded-submenu">
+                            <li class="">
+                                <a href="{{url('admin/users/list')}}">
+                                    <span class="">Events</span>
                                 </a>
                             </li>
                             
-                        </ul> --}}
+                        </ul>
                     </li>
                     <li class="">
                         <a href="{{ route('logout') }}"

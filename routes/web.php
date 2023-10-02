@@ -49,6 +49,10 @@ Route::get('/book-appointment', function(){
     return view('frontend.appointmentbooking');
 });
 
+Route::get('/upcoming-events', function(){
+    return view('frontend.upcomingevents');
+});
+
 Route::post('/request-appointment', [App\Http\Controllers\ClientAppointment::class, 'store']);
 
 Route::group(['prefix' => 'admin'], function(){
@@ -79,6 +83,12 @@ Route::group(['prefix' => 'admin'], function(){
         Route::get('edit-staff/{id}', [App\Http\Controllers\Team::class, 'editStaff']);
         Route::post('update-staff/{id}', [App\Http\Controllers\Team::class, 'updateStaff']);
         Route::get('delete-staff/{id}', [App\Http\Controllers\Team::class, 'deleteStaff']);
+    });
+
+    Route::group(['prefix' => 'users'], function(){
+        Route::get('list', [App\Http\Controllers\Users::class, 'listUsers']);
+        Route::get('create-user', [App\Http\Controllers\Users::class, 'createUser']);
+        Route::post('save-user', [App\Http\Controllers\Users::class, 'storeUser']);
     });
 });
 
