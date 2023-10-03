@@ -90,6 +90,15 @@ Route::group(['prefix' => 'admin'], function(){
         Route::get('create-user', [App\Http\Controllers\Users::class, 'createUser']);
         Route::post('save-user', [App\Http\Controllers\Users::class, 'storeUser']);
     });
+
+    Route::group(['prefix' => 'events'], function(){
+        Route::get('list', [App\Http\Controllers\Events::class, 'Events']);
+        Route::get('create-event', [App\Http\Controllers\Events::class, 'CreateEvent']);
+        Route::post('save-event', [App\Http\Controllers\Events::class, 'SaveEvent']);
+        Route::get('edit-event/{id}', [App\Http\Controllers\Events::class, 'EditEvent']);
+        Route::post('update-event/{id}', [App\Http\Controllers\Events::class, 'UpdateEvent']);
+        Route::get('delete-event/{id}', [App\Http\Controllers\Events::class, 'DeleteEvent']);
+    });
 });
 
 

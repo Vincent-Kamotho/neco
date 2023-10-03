@@ -30,7 +30,7 @@
                     </li>
                     <li class="pcoded-hasmenu">
                         <a href="javascript:void(0)">
-                            <span class="pcoded-micon"><i class="feather icon-users"></i></span>
+                            <span class="pcoded-micon"><i class="feather icon-user-plus"></i></span>
                             <span class="pcoded-mtext">Team</span>
                         </a>
                         <ul class="pcoded-submenu">
@@ -73,7 +73,7 @@
                         </a>
                         <ul class="pcoded-submenu">
                             <li class="">
-                                <a href="{{url('admin/users/list')}}">
+                                <a href="{{url('admin/events/list')}}">
                                     <span class="">Events</span>
                                 </a>
                             </li>

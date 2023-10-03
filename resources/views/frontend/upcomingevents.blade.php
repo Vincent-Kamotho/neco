@@ -36,15 +36,12 @@
                         <ul class="list-unstyled training">
                             <li class="mb-5 d-block d-lg-flex">
                                 <div class="mr-5 mb-4 img">
-                                    <a href="{{url('personal-problem')}}"><img
-                                            src="{{asset('assets/frontend/images/personal_problems_info.jpg')}}"
-                                            alt="Image" class="img-fluid"></a>
+                                    <img src="{{asset('assets/frontend/images/personal_problems_info.jpg')}}" alt="Image" class="img-fluid">
                                 </div>
                                 <div>
-                                    <h2 class="h4"><a href="{{url('personal-problem')}}" class="text-black">How to deal
-                                            your
-                                            Personal Problem?</a></h2>
+                                    <h2 class="h4" >Anger Management and Evidence Based conflict resolution techniques</h2>
                                     <span class="text-muted d-block mb-4">Mental Health</span>
+                                    <p>Time:   Time</p>
                                     <p>Time:   Time</p>
                                 </div>
                             </li>
@@ -70,6 +67,7 @@
                             
                         </ul>
                     </div>
+                    
                 </div>
 
                 
