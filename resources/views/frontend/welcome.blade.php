@@ -56,13 +56,10 @@
                             </ul>
                         </nav>
                     </div>
-
-                    
-                    
                 </div>
             </div>
         </header>
-        <div class="site-blocks-cover overlay" style="background-image: url(assets/frontend/images/hero_1.jpg);" data-aos="fade"
+        <div class="site-blocks-cover overlay" style="background-image: url(assets/frontend/images/eliud_refab.jpeg);" data-aos="fade"
             id="home-section">
             <div class="container">
                 <div class="row">
@@ -110,7 +107,7 @@
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-lg-5 ml-auto mb-5 order-md-2" data-aos="fade">
-                        <img src="{{asset('assets/frontend/images/about_1.jpg')}}" alt="Image" class="img-fluid rounded">
+                        <img src="{{asset('assets/frontend/images/eliud_logo_2.jpeg')}}" alt="Image" class="img-fluid rounded">
                     </div>
                     <div class="col-lg-6 order-md-1" data-aos="fade">
                         <h2 class="section-title mb-6">Welcome to Newness Counselling</h2>
@@ -210,86 +207,7 @@
                 </div>
             </div>
         </div>
-        <section class="site-section border-bottom" id="team-section">
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-lg-7 text-left">
-                        <h2 class="section-title mb-3">Meet Team</h2>
-                        <p class="lead">Meet our professional team.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="team-member">
-                            <figure>
-                                <ul class="social">
-                                    <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                    <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                    <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                                    <li><a href="#"><span class="icon-instagram"></span></a></li>
-                                </ul>
-                                <img src="assets/frontend/images/person_5.jpg" alt="Image" class="img-fluid">
-                            </figure>
-                            <div class="p-3">
-                                <h3>Kaiara Spencer</h3>
-                                <span class="position">Expert in Motivational</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="team-member">
-                            <figure>
-                                <ul class="social">
-                                    <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                    <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                    <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                                    <li><a href="#"><span class="icon-instagram"></span></a></li>
-                                </ul>
-                                <img src="assets/frontend/images/person_6.jpg" alt="Image" class="img-fluid">
-                            </figure>
-                            <div class="p-3">
-                                <h3>Dave Simpson</h3>
-                                <span class="position">Expert in Financing Issue</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="team-member">
-                            <figure>
-                                <ul class="social">
-                                    <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                    <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                    <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                                    <li><a href="#"><span class="icon-instagram"></span></a></li>
-                                </ul>
-                                <img src="assets/frontend/images/person_7.jpg" alt="Image" class="img-fluid">
-                            </figure>
-                            <div class="p-3">
-                                <h3>Ben Thompson</h3>
-                                <span class="position">Expert in Social Life</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="team-member">
-                            <figure>
-                                <ul class="social">
-                                    <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                    <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                    <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                                    <li><a href="#"><span class="icon-instagram"></span></a></li>
-                                </ul>
-                                <img src="assets/frontend/images/person_8.jpg" alt="Image" class="img-fluid">
-                            </figure>
-                            <div class="p-3">
-                                <h3>Kyla Stewart</h3>
-                                <span class="position">Expert in Social Life</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <section class="site-section">
             <div class="container">
                 <div class="row">
@@ -535,43 +453,49 @@
                 <div class="row">
                     <div class="col-md-4">
                         <p class="mb-0 font-weight-bold">Address</p>
-                        <p class="mb-4">203 Kiambu Kenya
+                        <p class="mb-4">Ruiru Doctor's Plaza
                     </div>
                     <div class="col-md-4">
                         <p class="mb-0 font-weight-bold">Phone</p>
-                        <p class="mb-4"><a href="#">+254 713 550 493</a></p>
+                        <p class="mb-4"><a href="tel:0713550493">+254 713 550 493</a></p>
                     </div>
                     <div class="col-md-4">
                         <p class="mb-0 font-weight-bold">Email Address</p>
-                        <p class="mb-0"><a href="#"><span class="__cf_email__"
-                                    data-cfemail="ccb5a3b9bea9a1ada5a08ca8a3a1ada5a2e2afa3a1">[email&#160;protected]</span></a>
+                        <p class="mb-0"><a href="mailto:newnesscounsellingorg@gmail.com"><span class="__cf_email__">newnesscounsellingorg@gmail.com</span></a>
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 mb-5">
-                        <form action="#" class="p-5 bg-white">
+                        
+                        <form action="{{url('message-us')}}" class="p-5 bg-white">
+                            @if(session()->has('success'))
+                            <div class="alert alert-success">
+                                {{ session()->get('success') }}
+                            </div>
+                        @endif
+                            @csrf
                             <h2 class="h4 text-black mb-5">Contact Form</h2>
                             <div class="row form-group">
                                 <div class="col-md-6 mb-3 mb-md-0">
                                     <label class="text-black" for="fname">First Name</label>
-                                    <input type="text" id="fname" class="form-control">
+                                    <input type="text" id="fname" name="fname" class="form-control">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="text-black" for="lname">Last Name</label>
-                                    <input type="text" id="lname" class="form-control">
+                                    <input type="text" id="lname" name="lname" class="form-control">
                                 </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label class="text-black" for="email">Email</label>
-                                    <input type="email" id="email" class="form-control">
+                                    <input type="email" id="email" name="email" class="form-control">
                                 </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label class="text-black" for="subject">Subject</label>
-                                    <input type="subject" id="subject" class="form-control">
+                                    <input type="subject" id="subject" name="subject" class="form-control">
                                 </div>
                             </div>
                             <div class="row form-group">

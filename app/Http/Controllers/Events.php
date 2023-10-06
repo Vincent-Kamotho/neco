@@ -14,6 +14,12 @@ class Events extends Controller
         return view('admin.events.events')->with('event' , $event);
     }
 
+    public function displayEvents()
+    {
+        $events = Event::all();
+        return view('frontend.upcomingevents')->with('events' , $events);
+    }
+
     public function CreateEvent()
     {
         return view('admin.events.addevent');

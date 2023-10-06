@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\ContactUs;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,16 +51,16 @@ Route::get('/book-appointment', function(){
     return view('frontend.appointmentbooking');
 });
 
-Route::get('/upcoming-events', function(){
-    return view('frontend.upcomingevents');
-});
+Route::get('/message-us', [App\Http\Controllers\ClientAppointment::class, 'sendEmail']);
+
+Route::get('/upcoming-events', [App\Http\Controllers\Events::class, 'displayEvents']);
 
 Route::post('/request-appointment', [App\Http\Controllers\ClientAppointment::class, 'store']);
 
-Route::group(['prefix' => 'admin'], function(){
+Route::group(['prefix' => 'admin' , 'middleware' => 'auth'], function(){
     Route::get('home', function() { 
         return view('admin.home'); 
-    })->middleware('auth');
+    });
     Route::get('appointments', [App\Http\Controllers\ClientAppointment::class, 'index']);
     Route::get('approve-appointment/{id}', [App\Http\Controllers\ClientAppointment::class, 'ApproveRequest']);
     Route::get('decline-appointment/{id}', [App\Http\Controllers\ClientAppointment::class, 'DeclineRequest']);

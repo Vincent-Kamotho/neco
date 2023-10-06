@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactUs;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -20,6 +21,19 @@ class ClientAppointment extends Controller
     {
         $appointments = Appointment::all();
         return view('admin.appointments.appointments')->with('appointments' , $appointments);
+    }
+    
+    public function sendEmail(Request $request)
+    {
+        $fname = $request->input('fname');
+        $lname = $request->input('lname');
+        $email = $request->input('email');
+        $subject = $request->input('subject');
+        $information = $request->input('message');
+        
+
+        Mail::to('vinsentwambugu@gmail.com')->send(new ContactUs($fname, $lname, $subject, $email , $information));
+        return redirect()->to('contact-us')->with('success', 'Your email has been sent');
     }
 
     /**

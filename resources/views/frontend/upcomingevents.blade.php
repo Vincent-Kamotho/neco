@@ -32,23 +32,27 @@
                     </div>
                 </div>
                 <div class="row">
+                    @foreach ($events as $event)
                     <div class="col-md-6">
                         <ul class="list-unstyled training">
                             <li class="mb-5 d-block d-lg-flex">
                                 <div class="mr-5 mb-4 img">
-                                    <img src="{{asset('assets/frontend/images/personal_problems_info.jpg')}}" alt="Image" class="img-fluid">
+                                    <img src="{{$event->image}}" alt="Image" style="height:100px; width:500px;" class="img-fluid">
                                 </div>
                                 <div>
-                                    <h2 class="h4" >Anger Management and Evidence Based conflict resolution techniques</h2>
-                                    <span class="text-muted d-block mb-4">Mental Health</span>
-                                    <p>Time:   Time</p>
-                                    <p>Time:   Time</p>
+                                    <h2 class="h4" >{{$event->title}}</h2>
+                                    <p>Date:   {{$event->date}}</p>
+                                    <p>Time:   {{$event->start_time}}</p>
+                                    <p>Day:    {{$event->day}}</p>
+                                    <p>Venue:  {{$event->venue}}</p>
+                                    <p>Charges: {{$event->charges}}</p>
                                 </div>
                             </li>
                             
                         </ul>
                     </div>
-                    <div class="col-md-6">
+                    @endforeach
+                    {{--<div class="col-md-6">
                         <ul class="list-unstyled training">
                             <li class="mb-5 d-block d-lg-flex">
                                 <div class="mr-5 mb-4 img">
@@ -66,7 +70,7 @@
                             </li>
                             
                         </ul>
-                    </div>
+                    </div> --}}
                     
                 </div>
 

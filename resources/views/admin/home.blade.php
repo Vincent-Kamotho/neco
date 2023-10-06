@@ -45,6 +45,7 @@
                             <div class="main-body">
                                 <div class="page-wrapper">
                                     <div class="page-body">
+                                        <!--
                                         <div class="row">
                                             <div class="col-xl-3 col-md-6">
                                                 <div class="card bg-c-yellow update-card">
@@ -127,6 +128,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    -->
                                     </div>
                                 </div> 
                             </div>
