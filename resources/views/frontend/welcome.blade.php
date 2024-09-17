@@ -35,15 +35,17 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-6 col-xl-2">
-                        <a href="{{url('/')}}"><img src="{{asset('assets/frontend/images/neco-logo.png')}}" style="height:100px; margin-left:-70px" alt="Image" class="img-fluid rounded"></a>
+                        <a href="{{url('/')}}"><img src="{{asset('assets/frontend/images/neco-logo.png')}}" style="height:100px; margin-left:-70px" alt="Image" class="img-fluid rounded h2 mb-0"></a>
                     </div>
-                    <div class="col-12 col-md-10 d-none d-xl-block">
+                    {{-- <div class="col-12 col-md-10 d-none d-xl-block"> --}}
+                    <div class="col-12 col-md-10">
                         <nav class="site-navigation position-relative text-right" role="navigation">
-                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                            {{-- <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"> --}}
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-block d-lg-none">
                                 <li><a href="#home-section" class="nav-link">Home</a></li>
                                 <li><a href="#about-section" class="nav-link">About</a></li>
-                                <li><a href="#training-section" class="nav-link">Our Training</a></li>
                                 <li><a href="#services-section" class="nav-link">Services</a></li>
+                                <li><a href="#training-section" class="nav-link">Our Training</a></li>
                                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
                                 <li><a href="{{url('upcoming-events')}}" class="nav-link">Events</a></li>
                                 <li>
@@ -79,27 +81,24 @@
                     <div class="col-md-6 col-lg-4 d-flex">
                         <div class="mr-3"><span class="flaticon-bill display-3 text-special"></span></div>
                         <div>
-                            <h3 class="text-white h4">100% Confidential</h3>
-                            <p class="text-special">You can trust that our discussions will remain strictly Confidential, ensuring
-                                your privacy and peace of mind through out sessions.
+                            <h3 class="text-white h4">You are not alone</h3>
+                            <p class="text-special">Who do you call when you need someone to just listen to what you are going through? Who is there for you when you need a shoulder to lean on? We are here for you, no more suffering.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex">
                         <div class="mr-3"><span class="flaticon-bill display-3 text-special"></span></div>
                         <div>
-                            <h3 class="text-white h4">Qualified Team</h3>
-                            <p class="text-special">You can rely on our experienced and highly qualified team to provide
-                                you with expert guidance and support tailored to your needs.
+                            <h3 class="text-white h4">Confidentiality</h3>
+                            <p class="text-special">Confidentiality and client’s safety is our priority. We give you a safe space to express yourself, with confidentiality 100% assured.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex">
                         <div class="mr-3"><span class="flaticon-customer-service display-3 text-special"></span></div>
                         <div>
-                            <h3 class="text-white h4">Individual Approach</h3>
-                            <p class="text-special">We believe in a personalized and individualized approach, tailoring
-                                our guidance and support to your unique circumstance and goals.
+                            <h3 class="text-white h4">Qualified Team</h3>
+                            <p class="text-special">You can rely on our experienced and highly qualified team to provide you with expert counselling and training, tailored to your individual needs.
                             </p>
                         </div>
                     </div>
@@ -114,16 +113,133 @@
                     </div>
                     <div class="col-lg-6 order-md-1" data-aos="fade">
                         <h2 class="section-title mb-6">Welcome to Newness Counselling</h2>
-                        <p class="lead">We pride ourselves on being the preferred choice for those seeking backing in the realm of counseling and therapy. 
-                            Our extensive reach allows us to bring together the finest minds and resources to support individuals and organizations 
-                            in their pursuit of mental health and well-being.</p>
-                        <p>With an emphasis on innovation and effectiveness, we offer a range of funding opportunities that are carefully curated to match 
-                            the specific needs of each applicant, fostering a collaborative environment where success is not just an aspiration but a guarantee.</p>
+                        <h4 style="color: rgb(17, 33, 63)"><b>About Us</b></h4>
+                        <p class="lead">Newness Counselling and Healing LTD is a professional counselling and training firm, under Newness Counselling Organization (NECO). 
+                            We pride ourselves on being the preferred choice for those seeking quality, affordable and empathetic counseling/therapy and training services. 
+                            Our extensive reach allows us to bring together the finest minds and resources to support individuals, Groups, corporates and organizations in their pursuit of mental health wellness and holistic well-being.
+                            We offer individualized and root-cause-oriented counselling services, providing our clients with a safe space and a non-judgmental environment, where success is not just an aspiration but a guarantee.
+                            </p>
+
+                            <h4 style="color: rgb(17, 33, 63)"><b>Mission</b></h4>
+                        <p>The mission of NECO is to promote mental health awareness, helping individuals living with mental illness through (online and physical) sessions and advocating for mental health programs in institutions, organizations, formal and informal groups as well as community support services.</p>
+                        
+                        <h4 style="color: rgb(17, 33, 63)"><b>Vision</b></h4>
+                        <p>Our vision is to improve mental health standards of individuals, families, groups, institutions and organizations and provide affordable counseling and mental health programs to clients, to improve the lives of people living with mental illness and those in need of mentorship/advice from mental health professionals especially the youths.</p>
+                        
+                        <h4 style="color: rgb(17, 33, 63)"><b>About the founder</b></h4>
+                        <p>DR. Eliud Ngugi is a Counselling Psychologist, an award-winning mental health specialist, an author, and an excellent public speaker who has been featured in more than 10 mainstream media TV and Radio stations in Kenya. His well-polished counselling approaches and public speaking skills has enabled him to stand out changing hundreds of thousands if not millions of lives in Learning institutions, corporates, organizations, groups and individual clients.</p>
                         
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="site-section border-bottom bg-light" id="services-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="section-title mb-3">Our Services</h2>
+                    </div>
+                </div>
+                <div class="row align-items-stretch">
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-career"></span></div>
+                            <div>
+                                <h3>Individual Counselling</h3>
+                                <p>Empowering you to overcome personal challenges and rediscover your strength – Your journey to transformation starts Here. We are a haven of support and guidance for individuals facing personal struggles/suffering and are seeking positive change.
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-bill"></span></div>
+                            <div>
+                                <h3>Couples/Marriage Therapy</h3>
+                                <p>Happy and fulfilling relationships are made not found. Let us help you rediscover Connection and Strengthen Your Bond with your partner. We are your dedicated partner in nurturing and revitalizing relationships through our specialized couples counseling services. We are here to make sure that a happily ever after will crown you love story’s happy ending.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-customer-service"></span>
+                            </div>
+                            <div>
+                                <h3>Teenage Crisis Counselling</h3>
+                                <p>As a teenager/adolescent, it can be stressing to deal with the overwhelming life changes as you transition to adulthood. We are here for you, making sure that every stage of your life is a heaven on earth. Let us help you resolve self-esteem, peers, family, self-awareness, and relationship related issues.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-plan"></span></div>
+                            <div>
+                                <h3>Family Problem</h3>
+                                <p>Guidance and Reconciliation for Families Facing Challenges – Your Path to Healing Starts Here. 
+                                    We are a haven of support and understanding for families navigating through difficult times.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-growth"></span></div>
+                            <div>
+                                <h3>Trauma Therapy</h3>
+                                <p>Extreme strong emotional life experiences can block you from realizing your peak potential in life. Losing someone you love, experiencing sexual, emotional and physical abuse, witnessing and being a victim of an accident of any kind, parental neglect among others, are some of the traumatizing experiences that we can help you heal from for a happy fulfilling life.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-award"></span></div>
+                            <div>
+                                <h3>Child counselling and geriatrics services</h3>
+                                <p>Most often parents ask; can a child become stressed? Yes, they do, just like adults. Don’t let your child struggle with stressful life experiences, be their guardian angel. We also offer mental health services to the elderly ensuring that they age with a psychological smile.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-award"></span></div>
+                            <div>
+                                <h3>Mental health and public speaking</h3>
+                                <p>We offer profound mental health awareness and educative services in conferences, schools, churches/mosques, groups, organizations, events and corporates.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-award"></span></div>
+                            <div>
+                                <h3>Life coaching and career coaching</h3>
+                                <p>Sometimes making major decisions in life is a crisis least addressed. When you are faced with conflicting choices and decisions to make in life and concerning your career, its easy to stagnate slowing your progress and overall achievements in life. We are here for you.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-heart-rate-monitor"></span></div>
+                            <div>
+                                <h3>Personal therapy sessions for professional counsellors and psychologists</h3>
+                                <p>We offer professional personal therapy sessions to counselors and psychologists.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <div class="site-section bg-light" id="training-section">
             <div class="container">
                 <div class="row mb-5">
@@ -250,91 +366,7 @@
                 </div>
             </div>
         </section>
-        <section class="site-section border-bottom bg-light" id="services-section">
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-12 text-center">
-                        <h2 class="section-title mb-3">Our Services</h2>
-                    </div>
-                </div>
-                <div class="row align-items-stretch">
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-                        <div class="unit-4 d-flex">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-career"></span></div>
-                            <div>
-                                <h3>Relationship Problem</h3>
-                                <p>Discover renewed connection and harmony with our relationship support services. 
-                                    We specialize in offering compassionate and effective solutions for individuals 
-                                    and couples facing relationship challenges.
-                                </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="unit-4 d-flex">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-bill"></span></div>
-                            <div>
-                                <h3>Couples Counselling</h3>
-                                <p>Rediscover Connection and Strengthen Your Bond with Our Couples Counseling Services. 
-                                    We are your dedicated partner in nurturing and revitalizing relationships through our 
-                                    specialized couples counseling services.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="unit-4 d-flex">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-customer-service"></span>
-                            </div>
-                            <div>
-                                <h3>Depression Treatment</h3>
-                                <p>Discover Hope and Healing on Your Journey to Overcoming Depression with Our Specialized Treatment 
-                                    Services. We are a place of support, understanding, 
-                                    and transformation for individuals seeking effective treatment for depression.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="unit-4 d-flex">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-plan"></span></div>
-                            <div>
-                                <h3>Family Problem</h3>
-                                <p>Guidance and Reconciliation for Families Facing Challenges – Your Path to Healing Starts Here. 
-                                    We are a haven of support and understanding for families navigating through difficult times.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
-                        <div class="unit-4 d-flex">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-growth"></span></div>
-                            <div>
-                                <h3>Personal Problem</h3>
-                                <p>Empowering You to Overcome Personal Challenges and Rediscover Your Strength – Your 
-                                    Journey to Transformation Starts Here. We are a haven of support and guidance 
-                                    for individuals facing personal struggles and seeking positive change.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
-                        <div class="unit-4 d-flex">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-award"></span></div>
-                            <div>
-                                <h3>Business Problem</h3>
-                                <p>Navigating Business Challenges with Expert Guidance – Your 
-                                    Blueprint to Success Begins Here. We are your trusted ally in 
-                                    overcoming the hurdles and complexities of the business world.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
+
         <section class="site-section bg-light" id="contact-section">
             <div class="container">
                 <div class="row mb-5">
