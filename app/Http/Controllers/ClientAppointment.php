@@ -34,8 +34,7 @@ class ClientAppointment extends Controller
             'message' => 'required|string',
         ]);
 
-        // Mail::to('newnesscounsellingorg@gmail.com')
-        Mail::to('vincentwambuguvw97@gmail.com')
+        Mail::to('newnesscounsellingorg@gmail.com')
             ->send(new ContactUs($validated));
 
         //return redirect()->to('contact-us')->with('success', 'Your email has been sent');
