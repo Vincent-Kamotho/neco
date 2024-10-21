@@ -346,7 +346,7 @@
                                     <img src="{{asset('assets/frontend/images/personal_problems_info.jpg')}}" alt="Image" class="img-fluid">
                                 </div>
                                 <div>
-                                    <h2 class="h4">How to deal your Personal Problem?</h2>
+                                    <h2 class="h4">How to deal with your Personal Crisis?</h2>
                                     <span class="text-muted d-block mb-4">Mental Health</span>
                                     <p>Empowering You to Overcome Personal Challenges and Rediscover Your Strength - Your Journey to Transformation Starts Here .</p>
                                 </div>
@@ -488,7 +488,7 @@
                     </div>
                     <div class="col-md-4">
                         <p class="mb-0 font-weight-bold">Email Address</p>
-                        <p class="mb-0"><a href="mailto:newnesscounsellingorg@gmail.com"><span class="__cf_email__">newnesscounsellingorg@gmail.com</span></a>
+                        <p class="mb-0"><a href="mailto:newnesscounselingorg@gmail.com"><span class="__cf_email__">newnesscounselingorg@gmail.com</span></a>
                         </p>
                     </div>
                 </div>

@@ -81,11 +81,11 @@
                         <select name="issue" id="issue" value="{{old('issue')}}" class="form-control">
                             <option value="">Select Option</option>
                             <option value="Depression Treatment">Depression Treatment</option>
-                            <option value="Personal Problem">Personal Problem</option>
-                            <option value="Relationship Problem">Relationship Problem</option>
-                            <option value="Family Problem">Family Problem</option>
-                            <option value="Couples Counselling">Couples Counselling</option>
-                            <option value="Business Problem">Business Problem</option>
+                            <option value="Personal Problem">Personal Therapy</option>
+                            <option value="Relationship Problem">Relationship Therapy</option>
+                            <option value="Family Problem">Family Therapy</option>
+                            <option value="Couples Counselling">Couples Therapy</option>
+                            <option value="Business Problem">Business Therapy</option>
                             <option value="Other">Other</option>
                         </select>
                         @error('issue')
