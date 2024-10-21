@@ -31,7 +31,8 @@ class AppointmentDeclineResponse extends Mailable
     {
         //return $this->view('view.name');
         return $this->subject('Appointment Request Decline')
-            ->replyTo('newnesscounsellingorg@gmail.com')
+            // ->replyTo('newnesscounsellingorg@gmail.com')
+            ->replyTo('vincentwambuguvw97@gmail.com')
             ->view('mail.appointmentdecline')
             ->with(['appointment' => $this->appointment]);
     }
