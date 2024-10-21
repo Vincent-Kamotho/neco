@@ -8,11 +8,21 @@
 </head>
 <body>
     <p>Hello, </p>
-    <p>You a new email from {{$fname}} {{$lname}}</p>
+    <p>You a new email from {{$details['fname']}}
+        @if(!empty($details['lname']))
+            {{$details['lname']}}
+        @endif
+    </p>
 
     <ul>
-        <li><strong>Subject: </strong> {{ $email}}</li>
-        <li><strong>Message: </strong> {{ $information}}</li>
+        <li><strong>Email: </strong> {{$details['email']}}</li>
+        <li>
+            <strong>Subject: </strong> 
+            @if(!empty($details['subject']))
+                {{$details['subject']}}
+            @endif
+        </li>
+        <li><strong>Message: </strong> {{$details['message']}}</li>
     </ul>
 </body>
 </html>

@@ -31,6 +31,7 @@ class AppointmentApprovalResponse extends Mailable
     {
         //return $this->view('view.name');
         return $this->subject('Appointment Request Approval')
+            ->replyTo('newnesscounsellingorg@gmail.com')
             ->view('mail.appointmentapproval')
             ->with(['appointment' => $this->appointment]);
     }

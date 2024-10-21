@@ -25,15 +25,21 @@ class ClientAppointment extends Controller
     
     public function sendEmail(Request $request)
     {
-        $fname = $request->input('fname');
-        $lname = $request->input('lname');
-        $email = $request->input('email');
-        $subject = $request->input('subject');
-        $information = $request->input('message');
-        
+        //Function to receive email from the contact us section.
+        $validated = $request->validate([
+            'fname' => 'required|string|max:255',
+            'lname' => '',
+            'email' => 'required|email',
+            'subject' => '',
+            'message' => 'required|string',
+        ]);
 
-        Mail::to('vinsentwambugu@gmail.com')->send(new ContactUs($fname, $lname, $subject, $email , $information));
-        return redirect()->to('contact-us')->with('success', 'Your email has been sent');
+        Mail::to('newnesscounsellingorg@gmail.com')
+            ->send(new ContactUs($validated));
+
+        //return redirect()->to('contact-us')->with('success', 'Your email has been sent');
+        return redirect()->route('welcome', ['#contact-section'])
+                         ->with('success', 'Your email has been sent successfully');
     }
 
     /**

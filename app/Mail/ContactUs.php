@@ -16,18 +16,11 @@ class ContactUs extends Mailable
      *
      * @return void
      */
-    public $fname;
-    public $lname;
-    public $email;
-    public $subject;
-    public $information;
-    public function __construct($fname , $lname, $email, $subject, $information)
+
+    public $details;
+    public function __construct($details)
     {
-        $this->fname = $fname;
-        $this->lname = $lname;
-        $this->email = $email;
-        $this->subject = $subject;
-        $this->information = $information;
+        $this->details = $details;
     }
 
     /**
@@ -37,6 +30,9 @@ class ContactUs extends Mailable
      */
     public function build()
     {
-        return $this->subject($this->subject)->view('mail.contactus');
+        //return $this->subject($this->subject)->view('mail.contactus');
+        return $this->subject($this->details['subject'])
+                    ->replyTo($this->details['email'])
+                    ->view('mail.contactus');
     }
 }
