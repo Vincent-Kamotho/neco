@@ -420,7 +420,7 @@
 
                     <div class="list-group">
                         <li style="margin-bottom: 10px;"> Emotional Intelligence, Depression, loss and Grief, trauma, addiction Counselling, Geriatrics and Teenage crisis Short courses. </li>
-                        <li style="margin-bottom: 10px;"> Mental Health Public Speaking in Corporates,  Schools,  Churches,  Mosques,  Gatherings and Events  etc. </li>
+                        <li style="margin-bottom: 10px;"> Mental Health Public Speaking in Corporates, Schools, Churches, Mosques, Gatherings and Events etc. </li>
                     </div>
                 </div>
             </div>
@@ -492,6 +492,19 @@
                         </p>
                     </div>
                 </div>
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <!-- Embedded Google Map -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.4455779475446!2d36.96687947462035!3d-1.1865496344826548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1ba4473e1e0f%3A0x69a0030f4f3928f4!2sApex%20Building%2C%20Juja!5e0!3m2!1sen!2ske!4v1697976726913!5m2!1sen!2ske"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+
                 <div class="row">
                     <div class="col-md-12 mb-5">
                         <form action="{{url('message-us')}}" class="p-5 bg-white">
